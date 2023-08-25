@@ -7,5 +7,7 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
+    # id = 자동으로 들어옴
     content = models.TextField()
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    # article_id = 자동으로 들어옴

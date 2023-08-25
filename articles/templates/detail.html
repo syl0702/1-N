@@ -7,9 +7,10 @@
 
     <hr>
 
-    <form action="{% url 'articles:comment_create' article_id=article.id %}" method="POST"></form>
-    {% csrf_token %}
-    {{comment_form}}
-    <input type="submit">
+    <form action="{% url 'articles:comment_create' article_id=article.id %}" method="POST">
+        {% csrf_token %}
+        {{comment_form}}
+        <input type="submit">
+    </form>
 
 {% endblock %}
