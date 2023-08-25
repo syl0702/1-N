@@ -39,7 +39,8 @@ def detail(request, id):
     # 두 번째 방법 article 기준으로 댓글보기
     # comment_list = article.comment_set.all()
 
-
+    # 세 번째 방법
+    # html코드에서 article.comment_set.all로 사용
 
     context = {
         'article': article,
@@ -68,9 +69,8 @@ def comment_create(request, article_id):
         # 두번째 방법.
         comment.article_id = article_id
         
-        # 세 번째 방법
-        # html코드에서 article.comment_set.all로 사용
 
+        
         # 저장
         comment.save()
 
