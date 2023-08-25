@@ -4,6 +4,7 @@ from django.db import models
 class Article(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
+    # comment_set = 자동으로 들어옴
 
 
 class Comment(models.Model):
